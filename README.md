@@ -26,7 +26,7 @@ Zur Automatisierung habe ich das kleine python-package 'adv' entwickelt, welches
 
 
 ## HALE Transformation AdV INSPIRE alignments
-Für die Transformation benötigen wir [HALE Studio] (https://www.wetransform.to/products/halestudio/), das wir uns als [Snapshot] (https://builds.wetransform.to/job/hale/job/hale~publish(master)/) herunterladen. Zusätzlich benötigen wir das gradle Projekt mit den AdV INSPIRE alignments. Ansprechpartner hierfür ist die AdV. Dann downloaden wir uns [gradle] (https://gradle.org/releases/) in der benötigten Version und kopieren den Inhalt nach *C:\Gradle\gradle-version*, setzen *GRADLE_HOME* sowie *PATH* und sind startklar.
+Für die Transformation benötigen wir [HALE Studio](https://www.wetransform.to/products/halestudio/), das wir uns als [Snapshot](https://builds.wetransform.to/job/hale/job/hale~publish(master)/) herunterladen. Zusätzlich benötigen wir das gradle Projekt mit den AdV INSPIRE alignments. Ansprechpartner hierfür ist die AdV. Dann downloaden wir uns [gradle](https://gradle.org/releases/) in der benötigten Version und kopieren den Inhalt nach *C:\Gradle\gradle-version*, setzen *GRADLE_HOME* sowie *PATH* und sind startklar.
 ```
 GRADLE_HOME: C:\Gradle\gradle-4.8
 Path: %GRADLE_HOME%\bin
