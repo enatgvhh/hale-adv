@@ -51,4 +51,4 @@ FME ist ein ausgereiftes Werkzeug, mit dem ich ansonsten alle [INSPIRE-Transform
 
 
 ## Summary
-Persönlich würde ich FME immer HALE vorziehen. Anderseits ist es natürlich mit sehr viel Aufwand verbunden, neue 'aaa2inspire' Transformationsmodelle in FME zu erstellen und diese den Versionsänderungen anzupassen. HALE spart hier also Zeit und Energie. Das hat aber seinen Preis. Viele Transformationsergebnisse finde ich qualitativ absolut nicht überzeugend,vom Workflow sowie der Notwendigkeit eigene Transformer völlig neu zu programmieren, ganz zu schweigen. 
+Persönlich würde ich FME immer HALE vorziehen. Anderseits ist es natürlich mit sehr viel Aufwand verbunden, neue 'aaa2inspire' Transformationsmodelle in FME zu erstellen und diese den Versionsänderungen anzupassen. HALE spart hier also Zeit und Energie. Das hat aber seinen Preis. Viele Transformationsergebnisse finde ich qualitativ absolut nicht überzeugend, vom Workflow sowie der Notwendigkeit eigene Transformer völlig neu zu programmieren und der Performance, ganz zu schweigen. 
