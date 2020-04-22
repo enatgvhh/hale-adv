@@ -37,7 +37,7 @@ cd C:\...\inspire_alignements
 gradle tasks -all
 gradle transform-au-dlkm-kommunalesGebiet
 ```
-Im python-package 'adv' werden die gradle-tasks über ein Objekt der Klasse *GradleProcess* gestartet. Alle Tasks für ein Projekt werden in einem Objekt der Klasse *ConfigProject* gespeichert, welche ihren Input aus einem member-Element des [Konfigurations-Files]( src/ConfigAdv.xml) beziehen. Die bei der Transformation erzeugten GML-Files werden im gradle Projekt in den Unterordner *transformiert* geschrieben.
+Im python-package 'adv' werden die gradle-tasks über ein Objekt der Klasse *GradleProcess* gestartet. Alle Tasks für ein Projekt werden in einem Objekt der Klasse *ConfigProject* gespeichert, welches seinen Input aus einem member-Element des [Konfigurations-Files]( src/ConfigAdv.xml) bezieht. Die bei der Transformation erzeugten GML-Files werden im gradle Projekt in den Unterordner *transformiert* geschrieben.
 
 
 ## GML-Loader deegree-gml-tool
