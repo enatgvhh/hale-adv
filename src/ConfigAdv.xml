@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ConfigAdv.xsd">
+	<logfile>E:\logs\loggerAdv.log</logfile>
+	<gradleprojectpath>E:\Program\gradle\inspire_alignements</gradleprojectpath>
+	<gmlloaderjarpath>C:\inspire\GMLLoader</gmlloaderjarpath>
+	<fme>
+		<fmepath>C:\Program Files\FME</fmepath>
+		<fmeworkbenchpath>E:\Program\FME\Workspaces\INSPIRE_adv</fmeworkbenchpath>
+		<fmeargs>--SourceDataset_POSTGIS inspire_sourc --DestDataset_POSTGIS inspire_dest</fmeargs>
+	</fme>
+	<databaseconnection>
+		<dbname>test</dbname>
+		<user>tester</user>
+		<host>localhost</host>
+		<port>5432</port>
+		<password>tester</password>
+	</databaseconnection>
+	<member>
+		<gradletask>transform-tn-w-basis-dlm</gradletask>
+		<gradletask>transform-tn-ra-basis-dlm</gradletask>
+		<gradletask>transform-tn-a-basis-dlm</gradletask>
+		<gradletask>transform-tn-ro-basis-dlm</gradletask>
+		<database>
+			<schema>tn_atkis</schema>
+			<table>tn_atkis.gml_objects</table>
+			<table>tn_atkis.wms_net_network</table>
+			<table>tn_atkis.wms_tn_a_aerodromearea</table>
+			<table>tn_atkis.wms_tn_a_apronarea</table>
+			<table>tn_atkis.wms_tn_a_runwayarea</table>
+			<table>tn_atkis.wms_tn_a_taxiwayarea</table>
+			<table>tn_atkis.wms_tn_ra_railwayarea</table>
+			<table>tn_atkis.wms_tn_ra_railwaylink</table>
+			<table>tn_atkis.wms_tn_ra_railwaystationarea</table>
+			<table>tn_atkis.wms_tn_ro_roadarea</table>
+			<table>tn_atkis.wms_tn_ro_roadlink</table>
+			<table>tn_atkis.wms_tn_ro_roadservicearea</table>
+			<table>tn_atkis.wms_tn_w_waterwaylink</table>
+			<table>tn_atkis.wms_tn_w_portarea</table>
+			<table>tn_atkis.wms_tn_w_ferrycrossing</table>
+			<table>tn_atkis.wms_tn_transportnetwork</table>
+		</database>
+		<gmlloader>
+			<javacommand>java -Dhttp.proxyHost=111.11.111.111 -Dhttp.proxyPort=80 -jar deegree-gml-tool-1.1-dev.jar GmlLoader -pathToFile=E:\Program\gradle\inspire_alignements\transformiert\tn-ra-basis-dlm\result.gml -workspaceName=inspire -sqlFeatureStoreId=tn/datasource_tn_atkis_blob -disabledResources=https://registry.gdi-de.org,http://inspire.ec.europa.eu</javacommand>
+			<javacommand>java -Dhttp.proxyHost=111.11.111.111 -Dhttp.proxyPort=80 -jar deegree-gml-tool-1.1-dev.jar GmlLoader -pathToFile=E:\Program\gradle\inspire_alignements\transformiert\tn-w-basis-dlm\result.gml -workspaceName=inspire -sqlFeatureStoreId=tn/datasource_tn_atkis_blob -disabledResources=https://registry.gdi-de.org,http://inspire.ec.europa.eu</javacommand>		
+			<javacommand>java -Dhttp.proxyHost=111.11.111.111 -Dhttp.proxyPort=80 -jar deegree-gml-tool-1.1-dev.jar GmlLoader -pathToFile=E:\Program\gradle\inspire_alignements\transformiert\tn-a-basis-dlm\result.gml -workspaceName=inspire -sqlFeatureStoreId=tn/datasource_tn_atkis_blob -disabledResources=https://registry.gdi-de.org,http://inspire.ec.europa.eu</javacommand>
+			<javacommand>java -Dhttp.proxyHost=111.11.111.111 -Dhttp.proxyPort=80 -jar deegree-gml-tool-1.1-dev.jar GmlLoader -pathToFile=E:\Program\gradle\inspire_alignements\transformiert\tn-ro-basis-dlm\result.gml -workspaceName=inspire -sqlFeatureStoreId=tn/datasource_tn_atkis_blob -disabledResources=https://registry.gdi-de.org,http://inspire.ec.europa.eu</javacommand>			
+			<javacommand>java -Dhttp.proxyHost=111.11.111.111 -Dhttp.proxyPort=80 -jar deegree-gml-tool-1.1-dev.jar GmlLoader -pathToFile=E:\Program\gradle\inspire_alignements\transformiert\tn-ra-basis-dlm\result.gml -workspaceName=inspire -sqlFeatureStoreId=datasource_tn_atkis_4wms  -disabledResources=https://registry.gdi-de.org,http://inspire.ec.europa.eu</javacommand>
+			<javacommand>java -Dhttp.proxyHost=111.11.111.111 -Dhttp.proxyPort=80 -jar deegree-gml-tool-1.1-dev.jar GmlLoader -pathToFile=E:\Program\gradle\inspire_alignements\transformiert\tn-w-basis-dlm\result.gml -workspaceName=inspire -sqlFeatureStoreId=datasource_tn_atkis_4wms  -disabledResources=https://registry.gdi-de.org,http://inspire.ec.europa.eu</javacommand>
+			<javacommand>java -Dhttp.proxyHost=111.11.111.111 -Dhttp.proxyPort=80 -jar deegree-gml-tool-1.1-dev.jar GmlLoader -pathToFile=E:\Program\gradle\inspire_alignements\transformiert\tn-a-basis-dlm\result.gml -workspaceName=inspire -sqlFeatureStoreId=datasource_tn_atkis_4wms  -disabledResources=https://registry.gdi-de.org,http://inspire.ec.europa.eu</javacommand>
+			<javacommand>java -Dhttp.proxyHost=111.11.111.111 -Dhttp.proxyPort=80 -jar deegree-gml-tool-1.1-dev.jar GmlLoader -pathToFile=E:\Program\gradle\inspire_alignements\transformiert\tn-ro-basis-dlm\result.gml -workspaceName=inspire -sqlFeatureStoreId=datasource_tn_atkis_4wms  -disabledResources=https://registry.gdi-de.org,http://inspire.ec.europa.eu</javacommand>
+		</gmlloader>
+		<fmeworkbench>transfer-tn-dlm.fmw</fmeworkbench>
+	</member>
+</ConfigObject>

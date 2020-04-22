@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- W3C Schema erstellt mit XMLSpy v2019 (x64) (http://www.altova.com) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ConfigObject">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="logfile"/>
+				<xs:element ref="gradleprojectpath"/>
+				<xs:element ref="gmlloaderjarpath"/>
+				<xs:element ref="fme"/>
+				<xs:element ref="databaseconnection"/>
+				<xs:element ref="member"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="database">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="schema"/>
+				<xs:element ref="table" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="databaseconnection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dbname"/>
+				<xs:element ref="user"/>
+				<xs:element ref="host"/>
+				<xs:element ref="port"/>
+				<xs:element ref="password"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dbname" type="xs:string"/>
+	<xs:element name="fme">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="fmepath"/>
+				<xs:element ref="fmeworkbenchpath"/>
+				<xs:element ref="fmeargs"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="fmeargs" type="xs:string"/>
+	<xs:element name="fmepath" type="xs:anyURI"/>
+	<xs:element name="fmeworkbench" type="xs:string"/>
+	<xs:element name="fmeworkbenchpath" type="xs:anyURI"/>
+	<xs:element name="gmlloader">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="javacommand" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="gmlloaderjarpath" type="xs:anyURI"/>
+	<xs:element name="gradleprojectpath" type="xs:anyURI"/>
+	<xs:element name="gradletask" type="xs:string"/>
+	<xs:element name="host" type="xs:string"/>
+	<xs:element name="javacommand" type="xs:string"/>
+	<xs:element name="logfile" type="xs:anyURI"/>
+	<xs:element name="member">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="gradletask" maxOccurs="unbounded"/>
+				<xs:element ref="database"/>
+				<xs:element ref="gmlloader"/>
+				<xs:element ref="fmeworkbench"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="password" type="xs:string"/>
+	<xs:element name="port" type="xs:short"/>
+	<xs:element name="schema" type="xs:string"/>
+	<xs:element name="table" type="xs:string"/>
+	<xs:element name="user" type="xs:string"/>
+</xs:schema>
