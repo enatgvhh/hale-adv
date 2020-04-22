@@ -37,15 +37,15 @@ cd C:\...\inspire_alignements
 gradle tasks -all
 gradle transform-au-dlkm-kommunalesGebiet
 ```
-Im python-package 'adv' werden die gradle-tasks über ein Objekt der Klasse GradleProcess gestartet. Alle Tasks für ein Projekt werden in einem Objekt der Klasse ConfigProject gespeichert, welche ihren Input aus einem member-Element des [Konfigurations-Files]( src/ConfigAdv.xml) beziehen. Die bei der Transformation erzeugten GML-Files werden im gradle Projekt in den Unterordner *transformiert* geschrieben.
+Im python-package 'adv' werden die gradle-tasks über ein Objekt der Klasse *GradleProcess* gestartet. Alle Tasks für ein Projekt werden in einem Objekt der Klasse *ConfigProject* gespeichert, welche ihren Input aus einem member-Element des [Konfigurations-Files]( src/ConfigAdv.xml) beziehen. Die bei der Transformation erzeugten GML-Files werden im gradle Projekt in den Unterordner *transformiert* geschrieben.
 
 
 ## GML-Loader deegree-gml-tool
-Über ein Objekt der Klasse PostgreProcess erfolgen das Leeren sowie die Wartung der Datenbanktabellen, die ebenfalls im Konfigurationsfile definiert werden. Dazwischen setzen wir den GML-Loader (*deegree-gml-tool-1.1.jar*) zum Laden der INSPIRE GML-Files in die Datenbank ein. Die vollständigen Java-Kommandos sind im Konfigurationsfile anzugeben. Gestartet werden sie über ein Objekt der Klasse JavaProcess. Der GML-Loader funktioniert in der eingesetzten Version ausgezeichnet. Ich kann also die negativen Bewertungen zu früheren Versionen widerlegen.
+Über ein Objekt der Klasse *PostgreProcess* erfolgen das Leeren sowie die Wartung der Datenbanktabellen, die ebenfalls im Konfigurationsfile definiert werden. Dazwischen setzen wir den GML-Loader (*deegree-gml-tool-1.1.jar*) zum Laden der INSPIRE GML-Files in die Datenbank ein. Die vollständigen Java-Kommandos sind im Konfigurationsfile anzugeben. Gestartet werden sie über ein Objekt der Klasse *JavaProcess*. Der GML-Loader funktioniert in der eingesetzten Version ausgezeichnet. Ich kann also die negativen Bewertungen zu früheren Versionen widerlegen.
 
 
 ## FME Data Pipeline
-Sowohl HALE Studio als auch der deegree GML-Loader sind große Ressourcenfresser. Wir setzen sie deshalb nur auf einer Stage-Umgebung ein. Den Transfer der Daten in die produktive Datenbank bewerkstelligen wir mit FME. Je Projekt gibt es dazu eine FME Workbench, die über ein Objekt der Klasse FmeProcess gestartet und im Konfigurationsfile definiert wird.
+Sowohl HALE Studio als auch der deegree GML-Loader sind große Ressourcenfresser. Wir setzen sie deshalb nur auf einer Stage-Umgebung ein. Den Transfer der Daten in die produktive Datenbank bewerkstelligen wir mit FME. Je Projekt gibt es dazu eine FME Workbench, die über ein Objekt der Klasse *FmeProcess* gestartet und im Konfigurationsfile definiert wird.
 
 FME ist ein ausgereiftes Werkzeug, mit dem ich ansonsten alle [INSPIRE-Transformationen]( https://github.com/enatgvhh/inspire) umgesetzt habe. HALE ist dazu keine Konkurrenz.
 
